@@ -50,15 +50,15 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("isWalking", moveDirection != 0);
 
-        // if (Time.time >= nextAttackTime)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.U) && isOnGround == true)
-        //     {
-        //         anim.SetTrigger("F1");
-        //         nextAttackTime = Time.time + 1f / attackRate;
-        //     }
-            
-        // }
+        //if (Time.time >= nextAttackTime)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.U) && isOnGround == true)
+        //    {
+        //        anim.SetTrigger("F1");
+        //        nextAttackTime = Time.time + 1f / attackRate;
+        //    }
+
+        //}
 
         if (Time.time >= nextAttackTime)
         {
