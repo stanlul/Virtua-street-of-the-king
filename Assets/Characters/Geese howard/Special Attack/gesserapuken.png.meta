@@ -96,6 +96,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -688,6 +689,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      gesserapuken_16: -2040759866143599376
+      gesserapuken_20: -1364545028571263902
+      gesserapuken_12: -7439407778749967241
+      gesserapuken_17: -1311368310715048126
+      gesserapuken_22: 4986802968261029151
+      gesserapuken_1: -1788646770811091440
+      gesserapuken_15: -8177621097899944546
+      gesserapuken_2: 4709804646663543978
+      gesserapuken_11: -6695000413529433003
+      gesserapuken_0: -3725902614367217912
+      gesserapuken_18: 3244561961458218282
+      gesserapuken_13: 2556085044576187349
+      gesserapuken_23: 4630664379447860628
+      gesserapuken_6: 3776571929820149292
+      gesserapuken_3: -1971447693689756775
+      gesserapuken_19: -1095393554442537805
+      gesserapuken_21: -6207092278150260164
+      gesserapuken_9: 6971904983597963722
+      gesserapuken_7: 3840781448129928209
+      gesserapuken_8: 2415198639892334662
+      gesserapuken_14: 5849882714374142153
+      gesserapuken_10: 6691096787922743511
+      gesserapuken_4: -3113991922371886163
+      gesserapuken_5: 1105205556627848843
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

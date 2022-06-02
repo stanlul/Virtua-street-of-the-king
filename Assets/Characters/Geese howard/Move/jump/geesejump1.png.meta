@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      geesejump1_2: 7991400442864204858
+      geesejump1_4: 4413005797795108082
+      geesejump1_1: -3162292936475235179
+      geesejump1_0: -9175359067552174276
+      geesejump1_5: 7185213182059487129
+      geesejump1_3: -5411558161634150546
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

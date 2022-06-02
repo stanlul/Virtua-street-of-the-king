@@ -57,6 +57,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -376,6 +377,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      geeseIdle_4: 7576017788805819822
+      geeseIdle_3: -6131242842566626960
+      geeseIdle_9: 3281769132086534800
+      geeseIdle_5: 5865347030660356787
+      geeseIdle_0: 4380007895396508462
+      geeseIdle_6: -1334095845592564640
+      geeseIdle_7: -2627558956076577655
+      geeseIdle_1: -1474518798138843954
+      geeseIdle_10: 6563219298641267041
+      geeseIdle_2: 3679610794384925185
+      geeseIdle_8: 8482014589061048220
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

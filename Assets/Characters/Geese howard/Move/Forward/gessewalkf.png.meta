@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -304,6 +305,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      gessewalkf_0: 3156445611592709293
+      gessewalkf_3: 7952197738092369162
+      gessewalkf_1: -561334174728564713
+      gessewalkf_5: 8050258426187497089
+      gessewalkf_7: -7440035543976706530
+      gessewalkf_2: 3996040828705534148
+      gessewalkf_4: 2588093685364256252
+      gessewalkf_6: -5193116903405298281
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
