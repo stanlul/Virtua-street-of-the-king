@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
+    private PlayerController pControl;
+
     public Transform Fire;
     public GameObject projectilePrefab;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+
+    private void Awake()
+    {
+        pControl = GetComponent<PlayerController>();
+    }
+
     void Update(){
 
     if (Time.time >= nextAttackTime)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && pControl.isOnGround == true)
         {
             Shoot();
             nextAttackTime = Time.time + 1f / attackRate;
