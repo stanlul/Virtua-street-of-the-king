@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.2667966
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -202,6 +202,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -232,6 +233,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
   m_RootOrder: 0
@@ -250,8 +252,8 @@ GameObject:
   - component: {fileID: 560667064}
   - component: {fileID: 560667063}
   - component: {fileID: 560667065}
-  - component: {fileID: 560667066}
   - component: {fileID: 560667067}
+  - component: {fileID: 560667068}
   m_Layer: 0
   m_Name: Geese
   m_TagString: Untagged
@@ -270,6 +272,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -320,6 +323,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.46, y: 0.0624, z: 0}
   m_LocalScale: {x: 1.7684094, y: 1.7487864, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 537083589}
   - {fileID: 1996672313}
@@ -329,7 +333,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &560667062
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -342,6 +346,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -407,9 +412,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jump: 119
   Defend: 111
-  MoveSpeed: 1
+  MoveSpeed: 1.5
   ChangeDirection: 0
-  JumpForce: 5
+  JumpForce: 7
   JumpAmounts: 0
   checkGround: {fileID: 537083589}
   checkRadius: 0.5
@@ -419,26 +424,6 @@ MonoBehaviour:
   isOnGround: 0
   anim: {fileID: 560667062}
   attackRate: 2
---- !u!114 &560667066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560667059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d0c6562d1f9d24eb032962c3feceff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 560667062}
-  attackRate: 2
-  checkGround: {fileID: 537083589}
-  checkRadius: 0.5
-  IsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  isOnGround: 0
 --- !u!114 &560667067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,6 +439,18 @@ MonoBehaviour:
   Fire: {fileID: 1996672313}
   projectilePrefab: {fileID: 5973553226183174966, guid: f659a35c0bfef8640a6d8a226cc3d139, type: 3}
   attackRate: 2
+--- !u!114 &560667068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560667059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85799657c0f928d4389f3577d0b2da63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &574415595
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +506,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -559,6 +557,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.029000089, y: -1.203, z: 0}
   m_LocalScale: {x: 7, y: 0.3922, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -589,6 +588,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.461, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
   m_RootOrder: 2
@@ -619,6 +619,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.26, y: -0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
   m_RootOrder: 1

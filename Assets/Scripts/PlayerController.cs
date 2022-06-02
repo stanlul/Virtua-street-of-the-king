@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
-    
+
 
     void Start()
     {
@@ -50,25 +50,6 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("isWalking", moveDirection != 0);
 
-        //if (Time.time >= nextAttackTime)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.U) && isOnGround == true)
-        //    {
-        //        anim.SetTrigger("F1");
-        //        nextAttackTime = Time.time + 1f / attackRate;
-        //    }
-
-        //}
-
-        if (Time.time >= nextAttackTime)
-        {
-            if (Input.GetKeyDown(KeyCode.J) && isOnGround == true)
-            {
-                anim.SetTrigger("midKick");
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
-
-        }
 
         if (Time.time >= nextAttackTime)
         {
@@ -80,18 +61,12 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.I) && isOnGround == true)
-        {
-            anim.SetTrigger("Attack2");
-        }else if (Input.GetKeyUp(KeyCode.I) && !isOnGround == true)
+        if (Input.GetKeyDown(KeyCode.I) && !isOnGround == true)
         {
             anim.SetTrigger("jumpPunch");
         }
-
-        if (Input.GetKeyDown(KeyCode.K) && isOnGround == true)
-        {
-            anim.SetTrigger("D4");
-        }else if (Input.GetKeyDown(KeyCode.K) && !isOnGround == true)
+        
+        if (Input.GetKeyDown(KeyCode.K) && !isOnGround == true)
         {
             anim.SetTrigger("JumpKick");
         }

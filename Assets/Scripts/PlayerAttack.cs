@@ -2,31 +2,137 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ComboState
+{
+    None,
+    Punch1,
+    Punch2,
+    Punch3
+}
+
 public class PlayerAttack : MonoBehaviour
 {
-   
-    public Animator anim;
-    public float attackRate = 2f;
-    float nextAttackTime = 0f;
+    private PlayerController pControl;
 
-    public Transform checkGround;
-    public float checkRadius;
-    public LayerMask IsGround;
-    public bool isOnGround;
+    private bool activateTimeToReset;
+    private float defaultComboTimer = 1f;
+    private float currentComboTimer;
+    private ComboState currentComboState;
 
+    private void Awake()
+    {
+        pControl = GetComponent<PlayerController>();
+    }
+
+    void Start()
+    {
+        currentComboTimer = defaultComboTimer;
+        currentComboState = ComboState.None;
+    }
+
+  
     void Update()
     {
-        if (Time.time >= nextAttackTime)
+        ComboAttack();
+        ResetComboState();
+    }
+
+    void ComboAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && pControl.isOnGround == true)
         {
-            if (Input.GetKeyDown(KeyCode.U) && isOnGround == true)
+            if (currentComboState == ComboState.Punch2)
             {
-                anim.SetTrigger("F1");
-                nextAttackTime = Time.time + 1f / attackRate;
+                return;
+            }
+            currentComboState++;
+            activateTimeToReset = true;
+            currentComboTimer = defaultComboTimer;
+
+            if (currentComboState == ComboState.Punch1)
+            {
+                pControl.anim.SetTrigger("Attack2");
+            }
+            if (currentComboState == ComboState.Punch2)
+            {
+                pControl.anim.SetTrigger("Attack2");
+            }
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.U) && pControl.isOnGround == true)
+        {
+            if (currentComboState == ComboState.Punch2)
+            {
+                return;
+            }
+            currentComboState++;
+            activateTimeToReset = true;
+            currentComboTimer = defaultComboTimer;
+
+            if (currentComboState == ComboState.Punch1)
+            {
+                pControl.anim.SetTrigger("F1");
+            }
+            if (currentComboState == ComboState.Punch2)
+            {
+                pControl.anim.SetTrigger("F1");
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.J) && pControl.isOnGround == true)
+        {
+            if (currentComboState == ComboState.Punch2)
+            {
+                return;
+            }
+            currentComboState++;
+            activateTimeToReset = true;
+            currentComboTimer = defaultComboTimer;
+
+            if (currentComboState == ComboState.Punch1)
+            {
+                pControl.anim.SetTrigger("midKick");
+            }
+            if (currentComboState == ComboState.Punch2)
+            {
+                pControl.anim.SetTrigger("D4");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.K) && pControl.isOnGround == true)
+        {
+            if (currentComboState == ComboState.Punch1)
+            {
+                return;
+            }
+            currentComboState++;
+            activateTimeToReset = true;
+            currentComboTimer = defaultComboTimer;
+
+            if (currentComboState == ComboState.Punch1)
+            {
+                pControl.anim.SetTrigger("D4");
             }
             
         }
 
+
     }
 
+    void ResetComboState()
+    {
+        if (activateTimeToReset)
+        {
+            currentComboTimer -= Time.deltaTime;
 
+            if (currentComboTimer <= 0f)
+            {
+                currentComboState = ComboState.None;
+                activateTimeToReset = false;
+                currentComboTimer = defaultComboTimer;
+            }
+        }
+    }
 }
