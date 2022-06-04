@@ -72,11 +72,11 @@ public class PlayerAttack : MonoBehaviour
 
             if (currentComboState == ComboState.Punch1)
             {
-                pControl.anim.SetTrigger("F1");
+                pControl.anim.SetTrigger("jab1");
             }
             if (currentComboState == ComboState.Punch2)
             {
-                pControl.anim.SetTrigger("F1");
+                pControl.anim.SetTrigger("jab1");
             }
 
         }
