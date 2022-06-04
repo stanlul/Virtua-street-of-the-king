@@ -41,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I) && pControl.isOnGround == true)
         {
-            if (currentComboState == ComboState.Punch2)
+            if (currentComboState == ComboState.Punch3)
             {
                 return;
             }
@@ -54,6 +54,10 @@ public class PlayerAttack : MonoBehaviour
                 pControl.anim.SetTrigger("Attack2");
             }
             if (currentComboState == ComboState.Punch2)
+            {
+                pControl.anim.SetTrigger("Attack2");
+            }
+            if (currentComboState == ComboState.Punch3)
             {
                 pControl.anim.SetTrigger("Attack2");
             }
@@ -78,6 +82,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 pControl.anim.SetTrigger("jab1");
             }
+            
 
         }
 
@@ -97,7 +102,7 @@ public class PlayerAttack : MonoBehaviour
             }
             if (currentComboState == ComboState.Punch2)
             {
-                pControl.anim.SetTrigger("D4");
+                pControl.anim.SetTrigger("midKick");
             }
         }
 
