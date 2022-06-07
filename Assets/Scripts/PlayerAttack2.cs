@@ -51,11 +51,11 @@ public class PlayerAttack2 : MonoBehaviour
 
             if (currentComboState == ComboState.Punch1)
             {
-                pControl.anim.SetTrigger("Attack2");
+                pControl.anim.SetTrigger("jab2");
             }
             if (currentComboState == ComboState.Punch2)
             {
-                pControl.anim.SetTrigger("Attack2");
+                pControl.anim.SetTrigger("jab2");
             }
         }
 
@@ -93,11 +93,11 @@ public class PlayerAttack2 : MonoBehaviour
 
             if (currentComboState == ComboState.Punch1)
             {
-                pControl.anim.SetTrigger("midKick");
+                pControl.anim.SetTrigger("kick1");
             }
             if (currentComboState == ComboState.Punch2)
             {
-                pControl.anim.SetTrigger("D4");
+                pControl.anim.SetTrigger("kick1");
             }
         }
 
@@ -113,7 +113,7 @@ public class PlayerAttack2 : MonoBehaviour
 
             if (currentComboState == ComboState.Punch1)
             {
-                pControl.anim.SetTrigger("D4");
+                pControl.anim.SetTrigger("kick2");
             }
             
         }

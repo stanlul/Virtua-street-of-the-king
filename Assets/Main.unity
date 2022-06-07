@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 240234299}
   - component: {fileID: 240234298}
   - component: {fileID: 240234303}
-  - component: {fileID: 240234304}
   m_Layer: 0
   m_Name: Akuma
   m_TagString: Untagged
@@ -289,36 +288,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 240234296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9202c6af860e43a4eb2aea81d32d6a8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 473c4dae90d067e44b99415a3e659c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jump: 119
-  Defend: 111
-  MoveSpeed: 1.5
-  ChangeDirection: 0
-  JumpForce: 7
-  JumpAmounts: 0
-  checkGround: {fileID: 1311265074}
-  checkRadius: 0.5
-  IsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  isOnGround: 0
-  anim: {fileID: 240234300}
-  attackRate: 2
-  health: 200
---- !u!114 &240234304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240234296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097d57dc83f1fe4408fbdb821d4478b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  player: {fileID: 240234302}
+  isFlipped: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +426,7 @@ GameObject:
   - component: {fileID: 560667068}
   m_Layer: 0
   m_Name: Geese
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,7 +562,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -608,7 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jump: 119
   Defend: 111
-  MoveSpeed: 1.5
+  MoveSpeed: 4
   ChangeDirection: 0
   JumpForce: 7
   JumpAmounts: 0
