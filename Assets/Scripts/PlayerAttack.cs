@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     private PlayerController pControl;
 
     private bool activateTimeToReset;
-    private float defaultComboTimer = 1f;
+    private float defaultComboTimer = 0.8f;
     private float currentComboTimer;
     private ComboState currentComboState;
 
@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
 
     void ComboAttack()
     {
-        if (Input.GetKeyDown(KeyCode.I) && pControl.isOnGround == true)
+        if (Input.GetKeyDown(KeyCode.I) && pControl.isOnGround)
         {
             if (currentComboState == ComboState.Punch3)
             {
@@ -63,8 +63,28 @@ public class PlayerAttack : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.I) && !pControl.isOnGround)
+        {
+            if (currentComboState == ComboState.Punch2)
+            {
+                return;
+            }
+            currentComboState++;
+            activateTimeToReset = true;
+            currentComboTimer = defaultComboTimer;
 
-        if (Input.GetKeyDown(KeyCode.U) && pControl.isOnGround == true)
+            if (currentComboState == ComboState.Punch1)
+            {
+                pControl.anim.SetTrigger("jumpPunch");
+            }
+            if (currentComboState == ComboState.Punch2)
+            {
+                pControl.anim.SetTrigger("jumpPunch2");
+            }
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.U) && pControl.isOnGround)
         {
             if (currentComboState == ComboState.Punch2)
             {
@@ -86,7 +106,7 @@ public class PlayerAttack : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.J) && pControl.isOnGround == true)
+        if (Input.GetKeyDown(KeyCode.J) && pControl.isOnGround)
         {
             if (currentComboState == ComboState.Punch2)
             {
@@ -106,7 +126,7 @@ public class PlayerAttack : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.K) && pControl.isOnGround == true)
+        if (Input.GetKeyDown(KeyCode.K) && pControl.isOnGround)
         {
             if (currentComboState == ComboState.Punch1)
             {
@@ -123,6 +143,22 @@ public class PlayerAttack : MonoBehaviour
             
         }
 
+        if (Input.GetKeyDown(KeyCode.K) && !pControl.isOnGround)
+        {
+            if (currentComboState == ComboState.Punch1)
+            {
+                return;
+            }
+            currentComboState++;
+            activateTimeToReset = true;
+            currentComboTimer = defaultComboTimer;
+
+            if (currentComboState == ComboState.Punch1)
+            {
+                pControl.anim.SetTrigger("JumpKick");
+            }
+
+        }
 
     }
 

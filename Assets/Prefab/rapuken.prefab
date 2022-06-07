@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8727370690985839164}
   - component: {fileID: 5229096150738853194}
-  - component: {fileID: 1650563663253655074}
   - component: {fileID: 6407794317889786913}
   - component: {fileID: 5048486262255977148}
+  - component: {fileID: 5666448397153805599}
   m_Layer: 0
   m_Name: rapuken
   m_TagString: Untagged
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1650563663253655074
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2159126597048953271}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.2, y: -1}
-  serializedVersion: 2
-  m_Radius: 0.6
 --- !u!50 &6407794317889786913
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +122,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rb: {fileID: 6407794317889786913}
+--- !u!61 &5666448397153805599
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159126597048953271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18126369, y: -1.0030227}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 5.12}
+    newSize: {x: 6.4, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9250524, y: 0.7659502}
+  m_EdgeRadius: 0

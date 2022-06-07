@@ -61,15 +61,6 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.I) && !isOnGround == true)
-        {
-            anim.SetTrigger("jumpPunch");
-        }
-        
-        if (Input.GetKeyDown(KeyCode.K) && !isOnGround == true)
-        {
-            anim.SetTrigger("JumpKick");
-        }
 
         if (Input.GetKeyDown(Jump))
         {

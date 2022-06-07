@@ -30,6 +30,9 @@ public class PlayerController2 : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    [Header("Character")]
+    public int health = 200;
+    //public GameObject deathEffect;
 
     void Start()
     {
@@ -115,6 +118,21 @@ public class PlayerController2 : MonoBehaviour
             anim.SetBool("isDefending", false);
         }
 
+    }
+
+    public void TakeDamage (int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        MoveSpeed = 0;
     }
 
     public void FlipPlayer(){
