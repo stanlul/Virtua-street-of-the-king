@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
-    public PlayerHealth health;
+    
 
 
 
@@ -96,18 +96,6 @@ public class PlayerController : MonoBehaviour
             myrigidbody.velocity = Vector2.up * JumpForce;
         }
 
-        if (Input.GetKeyDown(Defend))
-        {
-            MoveSpeed = 0;
-            anim.SetBool("isDefending", true);
-            JumpForce = 0;
-        }else if (Input.GetKeyUp(Defend))
-        {
-            MoveSpeed = 1;
-            JumpForce = 5;
-            anim.SetBool("isDefending", false);
-        }
-
     }
 
     public void FlipPlayer(){
@@ -115,11 +103,5 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
-    void Die(){
-        if(health.health <= 0){
-            MoveSpeed = 0;
-    }
-    }
-
-    }
+}
 

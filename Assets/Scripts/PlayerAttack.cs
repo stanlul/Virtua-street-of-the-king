@@ -19,6 +19,28 @@ public class PlayerAttack : MonoBehaviour
     private float currentComboTimer;
     private ComboState currentComboState;
 
+    [SerializeField]
+    private GameObject pAttackerPunch1;
+
+    [SerializeField]
+    private GameObject pAttackerPunch2;
+
+    //[SerializeField]
+    //private GameObject pAttackerKick1;
+    
+    //[SerializeField]
+    //private GameObject pAttackerKick2;
+    
+    //[SerializeField]
+    //private GameObject pAttackerJumpAttack1;
+
+    //[SerializeField]
+    //private GameObject pAttackerJumpAttack2;
+
+    //[SerializeField]
+    //private GameObject pAttackerJumpKick;
+
+
     private void Awake()
     {
         pControl = GetComponent<PlayerController>();
@@ -175,5 +197,30 @@ public class PlayerAttack : MonoBehaviour
                 currentComboTimer = defaultComboTimer;
             }
         }
+    }
+
+    public void ActivePunch1()
+    {
+        pAttackerPunch1.SetActive(true);
+    }
+
+    public void ActivePunch2()
+    {
+        pAttackerPunch2.SetActive(true);
+    }
+
+    public void DeactivePunch1()
+    {
+        pAttackerPunch1.SetActive(false);
+    }
+
+    public void DeactivePunch2()
+    {
+        pAttackerPunch2.SetActive(false);
+    }
+
+    public void DeactiveAll (){
+        pAttackerPunch1.SetActive(false);
+        pAttackerPunch2.SetActive(false);
     }
 }

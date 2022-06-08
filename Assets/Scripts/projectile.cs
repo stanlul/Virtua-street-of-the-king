@@ -8,8 +8,8 @@ public class projectile : MonoBehaviour
 
     public Transform Fire;
     public GameObject projectilePrefab;
-    public float attackRate = 2f;
-    float nextAttackTime = 0f;
+    private float attackRate = 2f;
+    private float nextAttackTime = 0f;
 
     private void Awake()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     public Transform player;
-    public bool isFlipped = false;
+    private bool isFlipped = false;
 
     public void LookPlayer(){
 
@@ -25,4 +25,5 @@ public class enemy : MonoBehaviour
         }
 
     }
+
 }
