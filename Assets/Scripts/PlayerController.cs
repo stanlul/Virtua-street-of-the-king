@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    public int health = 200;
+
 
     void Start()
     {
@@ -106,6 +108,21 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isDefending", false);
         }
 
+    }
+
+    public void TakeDamage (int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        MoveSpeed = 0;
     }
 
     public void FlipPlayer(){
