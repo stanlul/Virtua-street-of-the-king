@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    public PlayerHealth health;
 
-    public int health = 200;
 
 
     void Start()
@@ -110,24 +110,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void TakeDamage (int damage)
-    {
-        health -= damage;
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        MoveSpeed = 0;
-    }
-
     public void FlipPlayer(){
         ChangeDirection = !ChangeDirection;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    void Die(){
+        if(health.health <= 0){
+            MoveSpeed = 0;
+    }
     }
 
     }

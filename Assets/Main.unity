@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 240234299}
   - component: {fileID: 240234298}
   - component: {fileID: 240234303}
+  - component: {fileID: 240234304}
   m_Layer: 0
   m_Name: Akuma
   m_TagString: Untagged
@@ -276,6 +277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1311265074}
+  - {fileID: 2020691402}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -293,6 +295,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 560667061}
   isFlipped: 0
+--- !u!114 &240234304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240234296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2c0c901494f594d93b415d97acac4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
+  attackOffset: {x: 0, y: 0, z: 0}
+  attackRange: 1
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +444,8 @@ GameObject:
   - component: {fileID: 560667065}
   - component: {fileID: 560667067}
   - component: {fileID: 560667068}
-  m_Layer: 0
+  - component: {fileID: 560667069}
+  m_Layer: 8
   m_Name: Geese
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -594,6 +615,7 @@ MonoBehaviour:
   isOnGround: 0
   anim: {fileID: 560667062}
   attackRate: 2
+  health: {fileID: 0}
 --- !u!114 &560667067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +643,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85799657c0f928d4389f3577d0b2da63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &560667069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560667059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5065765ac03235f40a60aef03e5b3682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
 --- !u!1 &574415595
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311265074}
   m_Layer: 0
-  m_Name: asd
+  m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,5 +858,36 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2020691401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2020691402}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2020691402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020691401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 240234302}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
