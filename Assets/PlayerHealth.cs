@@ -5,7 +5,18 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private PlayerController pControl;
-    public int health = 200;
+    public int maxHealth = 200;
+    public int currentHealth;
+    public HealthBar healthBar;
+
+    void Start(){
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    void Update(){
+        
+    }
 
     private void Awake()
     {
@@ -14,9 +25,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
 
-        if (health <= 0)
+        healthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
         {
             Die();
         }
