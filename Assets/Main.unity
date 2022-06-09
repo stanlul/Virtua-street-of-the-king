@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 240234304}
   - component: {fileID: 240234305}
   - component: {fileID: 240234306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Akuma
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01589448, y: -0.874526}
+  m_Offset: {x: -0.015894473, y: -0.8342719}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -247,7 +247,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3241188, y: 0.8745682}
+  m_Size: {x: 0.3241188, y: 0.9550764}
   m_EdgeRadius: 0
 --- !u!50 &240234299
 Rigidbody2D:
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1868050443}
 --- !u!70 &240234306
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 835704855}
   - component: {fileID: 835704857}
   - component: {fileID: 835704856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311265074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1590,6 +1590,7 @@ GameObject:
   - component: {fileID: 1688089826}
   - component: {fileID: 1688089828}
   - component: {fileID: 1688089827}
+  - component: {fileID: 1688089829}
   m_Layer: 8
   m_Name: punch2
   m_TagString: punchAttacker
@@ -1605,7 +1606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688089825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.483, y: -0.506, z: 0}
+  m_LocalPosition: {x: 0.45, y: -0.462, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1646,9 +1647,28 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5716601, y: -0.04128065}
+  m_Offset: {x: 0.6049325, y: -0.039901126}
   serializedVersion: 2
-  m_Radius: 0.10492294
+  m_Radius: 0.06215782
+--- !u!114 &1688089829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688089825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 1688089826}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.2
+  punch1damage: 5
 --- !u!1 &1755483232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +1936,7 @@ GameObject:
   - component: {fileID: 1920424379}
   - component: {fileID: 1920424381}
   - component: {fileID: 1920424382}
+  - component: {fileID: 1920424383}
   m_Layer: 8
   m_Name: punch1
   m_TagString: punchAttacker
@@ -1975,6 +1996,25 @@ CircleCollider2D:
   m_Offset: {x: -0.052027527, y: -0.006471516}
   serializedVersion: 2
   m_Radius: 0.11818151
+--- !u!114 &1920424383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920424378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 1920424379}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.12
+  punch1damage: 5
 --- !u!1 &1996672312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,7 +2055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2020691402}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

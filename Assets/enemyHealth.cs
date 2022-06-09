@@ -8,9 +8,17 @@ public class enemyHealth : MonoBehaviour
     public int currentHealth;
     public EnemyHealthBar healthBar;
 
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -19,17 +27,9 @@ public class enemyHealth : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag(Tags.punch_attack_tag))
-        {
-            Die();
-        }
-    }
-
     void Die()
     {
-        Destroy(gameObject);
+        Debug.Log("enemy died");
     }
 
 }
