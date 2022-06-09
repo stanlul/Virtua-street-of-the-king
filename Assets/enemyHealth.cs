@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class enemyHealth : MonoBehaviour
 {
-    public int health = 200;
+    public int maxHealth = 200;
+    public int currentHealth;
+    public EnemyHealthBar healthBar;
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
