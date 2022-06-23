@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("keycodes")]
     public KeyCode Jump = KeyCode.W;
-    public KeyCode Defend = KeyCode.O;
 
     [Header("Move")]
     public float MoveSpeed;

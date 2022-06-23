@@ -980,7 +980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Jump: 119
-  Defend: 111
   MoveSpeed: 4
   ChangeDirection: 0
   JumpForce: 8
@@ -1585,6 +1584,7 @@ GameObject:
   - component: {fileID: 1363382318}
   - component: {fileID: 1363382320}
   - component: {fileID: 1363382319}
+  - component: {fileID: 1363382321}
   m_Layer: 8
   m_Name: jKick
   m_TagString: kickAttacker
@@ -1599,14 +1599,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363382317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.511, y: -0.925, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.0000012521173, y: -0.00014716694, z: -0.008507592, w: 0.9999638}
+  m_LocalPosition: {x: 0.5958509, y: -1.0220582, z: -1.1014321e-12}
+  m_LocalScale: {x: -0.01006307, y: -0.500393, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.017, z: -0.975}
 --- !u!58 &1363382319
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1614,15 +1614,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363382317}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08125413, y: -0.08663033}
+  m_Offset: {x: 0.5146381, y: 0.008892007}
   serializedVersion: 2
-  m_Radius: 0.08994964
+  m_Radius: 0.14885472
 --- !u!50 &1363382320
 Rigidbody2D:
   serializedVersion: 4
@@ -1644,6 +1644,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1363382321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363382317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 1363382318}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.14
+  punch1damage: 8
 --- !u!1 &1688089825
 GameObject:
   m_ObjectHideFlags: 0
