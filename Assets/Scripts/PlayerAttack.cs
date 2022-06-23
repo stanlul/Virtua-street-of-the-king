@@ -25,20 +25,20 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private GameObject pAttackerPunch2;
 
-    //[SerializeField]
-    //private GameObject pAttackerKick1;
-    
-    //[SerializeField]
-    //private GameObject pAttackerKick2;
-    
-    //[SerializeField]
-    //private GameObject pAttackerJumpAttack1;
+    [SerializeField]
+    private GameObject pAttackerKick1;
 
-    //[SerializeField]
-    //private GameObject pAttackerJumpAttack2;
+    [SerializeField]
+    private GameObject pAttackerKick2;
 
-    //[SerializeField]
-    //private GameObject pAttackerJumpKick;
+    [SerializeField]
+    private GameObject pAttackerJumpAttack1;
+
+    [SerializeField]
+    private GameObject pAttackerJumpAttack2;
+
+    [SerializeField]
+    private GameObject pAttackerJumpKick;
 
 
     private void Awake()
@@ -73,11 +73,11 @@ public class PlayerAttack : MonoBehaviour
 
             if (currentComboState == ComboState.Punch1)
             {
-                pControl.anim.SetTrigger("Attack2");
+                
             }
             if (currentComboState == ComboState.Punch2)
             {
-                pControl.anim.SetTrigger("Attack2");
+                
             }
             if (currentComboState == ComboState.Punch3)
             {
@@ -209,6 +209,31 @@ public class PlayerAttack : MonoBehaviour
         pAttackerPunch2.SetActive(true);
     }
 
+    public void ActiveKick1()
+    {
+        pAttackerKick1.SetActive(true);
+    }
+
+    public void ActiveKick2()
+    {
+        pAttackerKick2.SetActive(true);
+    }
+
+    public void ActivejPunch1()
+    {
+        pAttackerJumpAttack1.SetActive(true);
+    }
+
+    public void ActivejPunch2()
+    {
+        pAttackerJumpAttack2.SetActive(true);
+    }
+
+    public void ActivejKick1()
+    {
+        pAttackerJumpKick.SetActive(true);
+    }
+
     public void DeactivePunch1()
     {
         pAttackerPunch1.SetActive(false);
@@ -219,8 +244,38 @@ public class PlayerAttack : MonoBehaviour
         pAttackerPunch2.SetActive(false);
     }
 
+    public void DeactiveKick1()
+    {
+        pAttackerKick1.SetActive(false);
+    }
+
+    public void DeactiveKick2()
+    {
+        pAttackerKick2.SetActive(false);
+    }
+
+    public void DeActivejPunch1()
+    {
+        pAttackerJumpAttack1.SetActive(false);
+    }
+
+    public void DeActivejPunch2()
+    {
+        pAttackerJumpAttack2.SetActive(false);
+    }
+
+    public void DeActivejKick1()
+    {
+        pAttackerJumpKick.SetActive(false);
+    }
+
     public void DeactiveAll (){
         pAttackerPunch1.SetActive(false);
         pAttackerPunch2.SetActive(false);
+        pAttackerKick1.SetActive(false);
+        pAttackerKick2.SetActive(false);
+        pAttackerJumpAttack1.SetActive(false);
+        pAttackerJumpAttack2.SetActive(false);
+        pAttackerJumpKick.SetActive(false);
     }
 }

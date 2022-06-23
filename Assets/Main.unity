@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 391800365}
   - component: {fileID: 391800367}
   - component: {fileID: 391800366}
+  - component: {fileID: 391800368}
   m_Layer: 8
   m_Name: jPunch1
   m_TagString: punchAttacker
@@ -448,8 +449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391800364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.493, y: -0.578, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.5615, y: -0.65532, z: 0}
+  m_LocalScale: {x: 0.075, y: -0.575, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
@@ -462,15 +463,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391800364}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08996001, y: -0.04909047}
+  m_Offset: {x: 0.07405574, y: -0.04909047}
   serializedVersion: 2
-  m_Radius: 0.101500146
+  m_Radius: 0.08567401
 --- !u!50 &391800367
 Rigidbody2D:
   serializedVersion: 4
@@ -492,6 +493,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &391800368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391800364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 391800365}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.1
+  punch1damage: 5
 --- !u!1 &416396156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1021,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pAttackerPunch1: {fileID: 1920424378}
   pAttackerPunch2: {fileID: 1688089825}
+  pAttackerKick1: {fileID: 806180897}
+  pAttackerKick2: {fileID: 2097315156}
+  pAttackerJumpAttack1: {fileID: 391800364}
+  pAttackerJumpAttack2: {fileID: 850185580}
+  pAttackerJumpKick: {fileID: 1363382317}
 --- !u!114 &560667069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,6 +1126,7 @@ GameObject:
   - component: {fileID: 806180898}
   - component: {fileID: 806180900}
   - component: {fileID: 806180899}
+  - component: {fileID: 806180901}
   m_Layer: 8
   m_Name: kick1
   m_TagString: kickAttacker
@@ -1130,7 +1156,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806180897}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1160,6 +1186,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &806180901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806180897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 806180898}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.13
+  punch1damage: 3
 --- !u!1 &835704854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1286,7 @@ GameObject:
   - component: {fileID: 850185581}
   - component: {fileID: 850185583}
   - component: {fileID: 850185582}
+  - component: {fileID: 850185584}
   m_Layer: 8
   m_Name: jPunch2
   m_TagString: punchAttacker
@@ -1256,8 +1302,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850185580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.517, y: -0.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.56982, y: -0.61719, z: 0}
+  m_LocalScale: {x: -0.1375, y: -0.6625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
@@ -1291,7 +1337,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850185580}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1300,6 +1346,25 @@ CircleCollider2D:
   m_Offset: {x: 0.04643097, y: 0.031764466}
   serializedVersion: 2
   m_Radius: 0.09861254
+--- !u!114 &850185584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850185580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 850185581}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.11
+  punch1damage: 5
 --- !u!1 &1014450014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,12 +1413,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1368,8 +1433,8 @@ Canvas:
   m_GameObject: {fileID: 1014450014}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1591,6 +1656,7 @@ GameObject:
   - component: {fileID: 1688089828}
   - component: {fileID: 1688089827}
   - component: {fileID: 1688089829}
+  - component: {fileID: 1688089830}
   m_Layer: 8
   m_Name: punch2
   m_TagString: punchAttacker
@@ -1606,8 +1672,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688089825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45, y: -0.462, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.87905, y: -0.45167, z: 0}
+  m_LocalScale: {x: 0.000000077029, y: 1.1875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560667061}
@@ -1641,15 +1707,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688089825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6049325, y: -0.039901126}
+  m_Offset: {x: 0.30505866, y: -0.039901126}
   serializedVersion: 2
-  m_Radius: 0.06215782
+  m_Radius: 0.3605591
 --- !u!114 &1688089829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,8 +1733,24 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 0.2
+  attackRange: 0.1
   punch1damage: 5
+--- !u!70 &1688089830
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688089825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.42905238, y: -0.055088002}
+  m_Size: {x: 0.4513382, y: 0.11857903}
+  m_Direction: 1
 --- !u!1 &1755483232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 189, y: 140.78}
+  m_AnchoredPosition: {x: 293, y: 226}
   m_SizeDelta: {x: 314.0299, y: 21.8798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868050443
@@ -2114,7 +2196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -198.45906, y: 140.78442}
+  m_AnchoredPosition: {x: -328, y: 226}
   m_SizeDelta: {x: 314.0299, y: 21.8798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096601516
@@ -2192,6 +2274,7 @@ GameObject:
   - component: {fileID: 2097315157}
   - component: {fileID: 2097315159}
   - component: {fileID: 2097315158}
+  - component: {fileID: 2097315160}
   m_Layer: 8
   m_Name: kick2
   m_TagString: kickAttacker
@@ -2251,3 +2334,22 @@ CircleCollider2D:
   m_Offset: {x: 0.049332872, y: 0.031764485}
   serializedVersion: 2
   m_Radius: 0.0899496
+--- !u!114 &2097315160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097315156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c3c1f51e84c458058db9eb827a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 560667062}
+  punch1: {fileID: 2097315157}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.12
+  punch1damage: 5
