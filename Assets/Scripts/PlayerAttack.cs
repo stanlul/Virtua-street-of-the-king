@@ -144,7 +144,7 @@ public class PlayerAttack : MonoBehaviour
             }
             if (currentComboState == ComboState.Punch2)
             {
-                pControl.anim.SetTrigger("midKick");
+                
             }
         }
 
