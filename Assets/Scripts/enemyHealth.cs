@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class enemyHealth : MonoBehaviour
 {
     public int maxHealth = 200;
     public int currentHealth;
     public EnemyHealthBar healthBar;
+    public GameObject Win;
 
     void Start()
     {
@@ -27,9 +30,19 @@ public class enemyHealth : MonoBehaviour
 
     }
 
+    public void Rematch()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(1);
+
+    }
+
     void Die()
     {
-        Debug.Log("enemy died");
+        Time.timeScale = 0f;
+
+        Win.SetActive(true);
     }
 
 }

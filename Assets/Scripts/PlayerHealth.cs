@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 200;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameObject Lose;
 
     void Start(){
         currentHealth = maxHealth;
@@ -36,9 +38,19 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void Rematch()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(1);
+
+    }
+
     void Die()
     {
-        pControl.MoveSpeed = 0;
+        Time.timeScale = 0f;
+
+        Lose.SetActive(true);
     }
 
 
