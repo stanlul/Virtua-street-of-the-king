@@ -346,13 +346,13 @@ GameObject:
   - component: {fileID: 240234300}
   - component: {fileID: 240234299}
   - component: {fileID: 240234298}
-  - component: {fileID: 240234303}
+  - component: {fileID: 240234307}
   - component: {fileID: 240234304}
   - component: {fileID: 240234305}
   - component: {fileID: 240234306}
   m_Layer: 9
   m_Name: Akuma
-  m_TagString: Enemy
+  m_TagString: Player Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +467,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e821de8c5a6e114d83b9072e65c8310, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.4, y: 5.12}
@@ -484,8 +484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240234296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.93, y: -0.45, z: 0}
-  m_LocalScale: {x: 1.6932358, y: 1.7785549, z: 1}
+  m_LocalPosition: {x: 3.08, y: -0.2, z: 0}
+  m_LocalScale: {x: -2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1311265074}
@@ -494,19 +494,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &240234303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240234296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473c4dae90d067e44b99415a3e659c4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 560667061}
 --- !u!114 &240234304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,12 +506,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2c0c901494f594d93b415d97acac4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
-  attackOffset: {x: 0, y: 0, z: 0}
-  attackRange: 1
-  attackMask:
-    serializedVersion: 2
-    m_Bits: 256
+  pAttackerPunch1: {fileID: 0}
+  pAttackerPunch2: {fileID: 0}
+  pAttackerKick1: {fileID: 0}
+  pAttackerKick2: {fileID: 0}
+  pAttackerJumpAttack1: {fileID: 0}
+  pAttackerJumpAttack2: {fileID: 0}
+  pAttackerJumpKick: {fileID: 0}
 --- !u!114 &240234305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +545,34 @@ CapsuleCollider2D:
   m_Offset: {x: -0.020090975, y: -0.8598663}
   m_Size: {x: 0.29015148, y: 0.89692616}
   m_Direction: 0
+--- !u!114 &240234307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240234296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a4ccc2c30f88948993848cbb26102c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jump: 273
+  Left: 276
+  Right: 275
+  MoveSpeed: 4
+  target: {fileID: 0}
+  ChangeDirection: 1
+  JumpForce: 8
+  JumpAmounts: 0
+  checkGround: {fileID: 1311265074}
+  checkRadius: 0
+  IsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  isOnGround: 0
+  anim: {fileID: 240234300}
+  attackRate: 2
 --- !u!1 &374691039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +1048,7 @@ GameObject:
   - component: {fileID: 560667070}
   m_Layer: 8
   m_Name: Geese
-  m_TagString: Player
+  m_TagString: Player One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1097,8 +1113,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560667059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: -0.48, z: 0}
-  m_LocalScale: {x: 1.7233149, y: 1.7318231, z: 1}
+  m_LocalPosition: {x: -3.33, y: -0.19, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 537083589}
@@ -1167,7 +1183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Jump: 119
+  Left: 97
+  Right: 100
   MoveSpeed: 4
+  target: {fileID: 0}
   ChangeDirection: 0
   JumpForce: 8
   JumpAmounts: 0
@@ -1228,6 +1247,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 2096601516}
   Lose: {fileID: 1336727761}
+  anim: {fileID: 0}
 --- !u!70 &560667070
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2362,6 +2382,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 2096601516}
   Lose: {fileID: 1336727761}
+  anim: {fileID: 0}
 --- !u!1 &1346775157
 GameObject:
   m_ObjectHideFlags: 0

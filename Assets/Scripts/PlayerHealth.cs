@@ -10,10 +10,12 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
     public GameObject Lose;
+    public Animator anim;
 
     void Start(){
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        anim = GetComponent<Animator>();
     }
 
     void Update(){
@@ -49,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Time.timeScale = 0f;
-
+        anim.SetTrigger("die");
         Lose.SetActive(true);
     }
 

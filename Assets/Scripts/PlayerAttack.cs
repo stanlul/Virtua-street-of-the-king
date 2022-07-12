@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ComboState
+public enum EnemyCombo
 {
     None,
     Punch1,
